@@ -59,7 +59,6 @@ You may submit to both tracks as separate entries.
 ```
 quantum_hackathon_track1_participant.ipynb    Track 1    <- start here
 quantum_hackathon_track2_participant.ipynb    Track 2    <- or here
-assets/                                       logo images
 README.md                                     this file
 ```
 
