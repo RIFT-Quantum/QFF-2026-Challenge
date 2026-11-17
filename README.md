@@ -125,55 +125,6 @@ substantial part of a solution, add a short note in that cell. What matters is t
 can explain what you submitted.
 
 ---
-
-## For organisers
-
-### Logos
-
-The logo images are not in this repo. Drop them in `assets/` with these names:
-
-```
-assets/rift_labs_logo.png     RIFT Labs
-assets/cua_logo.png           The Catholic University of America
-```
-
-The cell at the top of each notebook reads whatever it finds there and embeds it
-directly, so the notebook then carries the logos inside itself and needs no network.
-`.png`, `.svg`, `.jpg`, `.jpeg`, `.gif` and `.webp` all work. For a different filename,
-or to point at a hosted image instead, edit the `file` or `url` field in the `LOGOS`
-list in that cell. Local files take priority over URLs.
-
-With neither in place the notebooks show a plain banner with both organisation names, so
-nothing breaks during a live session.
-
-### Rebuilding the participant copies
-
-Solution cells carry the metadata tag `solution`. The last code cell of each answer key
-regenerates the handout with those cells dropped:
-
-```python
-strip_solutions("quantum_hackathon_track1_beginner.ipynb",
-                "quantum_hackathon_track1_participant.ipynb")
-```
-
-Track 1 drops 17 cells, Track 2 drops 9. Do not hand-edit the participant copies, they
-get overwritten.
-
-### Verifying the answer keys
-
-```bash
-jupyter nbconvert --to notebook --execute quantum_hackathon_track1_beginner.ipynb
-jupyter nbconvert --to notebook --execute quantum_hackathon_track2_advanced.ipynb
-```
-
-`scoreboard()` raises if any check fails, so a clean run is a real verification.
-
-### Still to add
-
-Judging criteria, prizes, team rules, and where to ask questions during the event.
-
----
-
 <div align="center">
 
 **[Submit by Friday, November 20, 2026, 12:00 noon ET](https://forms.gle/XzEeSVtTvWzWVVxBA)**
